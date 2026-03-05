@@ -2,6 +2,7 @@ package features.vehicle.presentation;
 
 import features.vehicle.data.VehicleDataRepository;
 import features.vehicle.data.VehicleMemLocalDataSource;
+import features.vehicle.domain.DeleteVehicleUseCase;
 import features.vehicle.domain.GetVehiclesUseCase;
 import features.vehicle.domain.SaveVehicleUseCase;
 import features.vehicle.domain.Vehicle;
@@ -36,6 +37,18 @@ public class VehicleView {
 
     }
 
+    public static void deleteVehicles(String vehicleId) {
 
+        printVehicles();
+
+        DeleteVehicleUseCase deleteVehicleUseCase = new DeleteVehicleUseCase(
+                new VehicleDataRepository(
+                        VehicleMemLocalDataSource.newInstance()));
+
+        deleteVehicleUseCase.execute(vehicleId);
+
+        printVehicles();
+
+    }
 
 }

@@ -23,4 +23,8 @@ public class VehicleDataRepository implements VehicleRepository {
         vehicleMemLocalDataSource.save(vehicle);
     }
 
+    @Override
+    public void deleteVehicle(String vehicleId) {
+        vehicleMemLocalDataSource.delete(vehicleId);
+    }
 }

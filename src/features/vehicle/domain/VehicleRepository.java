@@ -6,5 +6,6 @@ public interface VehicleRepository {
 
     ArrayList<Vehicle> getVehicles();
     void saveVehicle(Vehicle vehicle);
+    void deleteVehicle(String vehicleId);
 
 }
