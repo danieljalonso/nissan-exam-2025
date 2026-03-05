@@ -25,7 +25,7 @@ public class VehicleMemLocalDataSource {
 
     public static VehicleMemLocalDataSource newInstance() {
         if (instance == null) {
-            return new VehicleMemLocalDataSource();
+            return instance = new VehicleMemLocalDataSource();
         }
 
         return instance;
