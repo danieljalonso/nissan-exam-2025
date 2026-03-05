@@ -18,4 +18,9 @@ public class VehicleDataRepository implements VehicleRepository {
         return vehicleMemLocalDataSource.findAll();
     }
 
+    @Override
+    public void saveVehicle(Vehicle vehicle) {
+        vehicleMemLocalDataSource.save(vehicle);
+    }
+
 }

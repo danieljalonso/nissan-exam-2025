@@ -5,5 +5,6 @@ import java.util.ArrayList;
 public interface VehicleRepository {
 
     ArrayList<Vehicle> getVehicles();
+    void saveVehicle(Vehicle vehicle);
 
 }
